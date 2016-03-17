@@ -1,0 +1,9 @@
+.applications {
+    padding: 5px;
+}
+
+.applications .application {
+    border: 1px solid;
+    display: inline-block;
+    padding: 5px;
+}

@@ -1,0 +1,238 @@
+.ob_step_part {
+    background-color: #FFF;
+    border:  1px solid rgb(210, 210, 210);
+    box-shadow: 0px 0px 8px 0px rgba(1, 1, 1, .15);
+    color: #757575 ;
+    position: absolute;
+    width: 325px;
+    border-radius: 5px;
+    z-index: 10001;
+    font-family: arial, sans-serif;
+}
+
+.ob_step_part:after {
+    box-shadow: 0px 0px 8px 0px rgba(1, 1, 1, .15);
+    border:  1px solid rgb(210, 210, 210);
+    width: 15px;
+    background: #FFF;
+    height: 15px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.ob_step_part:before {
+    width: 15px;
+    background: #FFF;
+    height: 25px;
+    z-index: 3;
+}
+
+/** -------------------------------- .ob_step_part shared properties **/
+
+.ob_step_part:before,
+.ob_step_part:after {
+    content:'';
+    position: absolute;
+    pointer-events: none;
+}
+
+/** -------------------------------- header **/
+
+.ob_header {
+    padding: 18px 25px 0 !important;
+}
+
+.ob_header h3 {
+    font-size: 15px !important;
+    font-weight: bold !important;
+    font-family: arial !important;
+    color: #484848 !important;
+    margin-top: 8px !important;
+}
+
+.ob_header span {
+    position: absolute !important;
+    top: 25px !important;
+    right: 25px !important;
+    color: #bfbfbf !important;
+}
+
+/** -------------------------------- content **/
+
+.ob_step_part_content {
+    z-index: 2;
+    padding: 15px 25px 15px;
+}
+
+.ob_step_part_content p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 22px !important;
+}
+/** -------------------------------- footer **/
+
+.ob_buttons {
+    padding: 0 25px;
+    height: 45px;
+    background-color: #F5F5F5;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    text-align: right;
+}
+
+/** -------------------------------- buttons **/
+
+.ob_buttons a {
+    text-decoration: none !important;
+    display: inline-block !important;
+    color: #757575 !important;
+    height: 25px !important;
+    line-height: 25px !important;
+    padding: 0 8px !important;
+    margin: 10px 0 0 0 !important;
+    font-size: 15px !important;
+}
+
+.ob_buttons a.skip:hover,  .ob_buttons a.previous:hover{
+    color: #484848 !important;
+}
+
+a.skip {
+    float:left !important;
+    padding: 0 !important;
+}
+
+a.previous {
+    margin-right: 10px !important;
+}
+
+a.next,
+a.finish {
+    color: #ff7c0f  !important;
+    border: 1px solid #ff7c0f !important;
+    border-radius: 3px !important;
+    line-height: 23px !important;
+}
+
+.ob_buttons a.finish:hover, .ob_buttons a.next:hover {
+    background-color: #ff7c0f !important;
+    color: #fff !important;
+}
+
+
+/** -------------------------------- margins for arrow **/
+
+.ob_pos_left {
+    margin-left: -15px;
+}
+
+.ob_pos_right {
+    margin-left:  15px;
+}
+
+.ob_pos_top {
+    margin-top: -15px;
+}
+
+.ob_pos_bottom {
+    margin-top:  15px;
+}
+
+/** -------------------------------- middle -- display none's the :before and :after  **/
+
+.ob_pos_middle:after,
+.ob_pos_middle:before {
+    display: none;
+}
+
+/** -------------------------------- left/right & top/bottom common  **/
+
+.ob_pos_left:after,
+.ob_pos_left:before,
+.ob_pos_right:before,
+.ob_pos_right:after {
+    top: 50%;
+}
+
+.ob_pos_top:after,
+.ob_pos_top:before,
+.ob_pos_bottom:before,
+.ob_pos_bottom:after {
+    left: 50%;
+}
+
+/** -------------------------------- bottom -- has different background-color for arrow **/
+
+.ob_pos_bottom:after {
+    top: -8px;
+}
+
+.ob_pos_bottom:before {
+    margin: 0 0 0 -7px;
+    width: 30px;
+    height: 15px;
+}
+
+/** -------------------------------- top  **/
+
+.ob_pos_top:after {
+    bottom: -7px;
+    background: #F5F5F5 ;
+}
+
+.ob_pos_top:before {
+    bottom: 0;
+    margin-left: -8px;
+    background: #F5F5F5 ;
+    width: 30px;
+    height: 15px;
+}
+
+/** -------------------------------- left  **/
+
+.ob_pos_right:after {
+    left: -8px;
+}
+
+.ob_pos_right:before {
+    left: 0;
+    margin: -6px 0 0;
+}
+
+/** -------------------------------- right  **/
+
+.ob_pos_left:after {
+    right: -8px;
+}
+
+.ob_pos_left:before {
+    right: 0;
+    margin: -6px 0 0;
+}
+
+/** -------------------------------- OVERLAY  **/
+
+#ob_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    background-color: rgba(0, 0, 0, .8); /*dim the background*/
+}
+
+.ob_highlight {
+    z-index: 9998;
+    position: relative;
+}
+
+.ob_step_part.first .ob_buttons .previous {
+    display: none !important;
+}
+
+.ob_step_part.last .ob_buttons .skip {
+    display: none !important;
+}

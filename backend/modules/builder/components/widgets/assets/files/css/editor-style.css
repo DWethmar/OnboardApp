@@ -1,0 +1,163 @@
+.remodal {
+    text-align: left;
+}
+
+.editor a {
+    color: #3366CC;
+}
+
+.editor .editor-head {
+    padding: 5px;
+    background: #d4d4d4;
+}
+
+.editor .controls {
+    margin: 5px 10px;
+}
+
+.editor .controls a {
+    white-space: pre;
+}
+
+.editor .collection {
+}
+
+.editor-head .type {
+    font-weight: bold;
+}
+
+.editor.saved {
+    -webkit-animation-name: flash;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        background-color: Yellow;
+        opacity:1;
+    }
+    100% {
+        background-color: initial;
+    }
+}
+
+.application-editor {
+    background-color: #F8F8F8;
+}
+
+.page-editor {
+    margin: 20px 0px 50px;
+    border: 1px solid black;
+}
+
+.page-editor > .editor-head {
+    background-color: #00CC99;
+}
+
+.chain-editor {
+    margin-top: 30px;
+    border-top: 1px solid black;
+}
+
+.chain-editor > .editor-head {
+    background-color: #FF9900;
+    padding-left: 30px;
+}
+
+
+.chain-editor > .editor-head{
+    border:solid 1px black;
+    position:relative;
+    display:block;
+}
+.chain-editor > .editor-head:before{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    border: 25px solid black;
+    border-color:transparent transparent transparent black;
+    top: 20px;
+    left: 0;
+}
+.chain-editor > .editor-head:after{
+    content:"";
+    display:inline-block;
+    position:absolute;
+    border: 24px solid white;
+    border-color:transparent transparent transparent #00CC99;
+    top: 21px;
+    left: -1px;
+}
+
+
+
+/** STEP EDITOR STYLING **/
+.step-editor {
+    display: inline-block;
+    height: 290px;
+    width: 300px;
+    position: relative;
+    border: 1px solid black;
+    margin: 0 10px 10px;
+    background-color: #d6d6d6;
+}
+
+
+.step-editor:after, .step-editor:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.step-editor:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: black;
+    border-width: 30px;
+    margin-top: -30px;
+}
+
+.step-editor:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: black;
+    border-width: 36px;
+    margin-top: -36px;
+}
+
+.step-part-collection {
+    padding: 10px;
+    background: white;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.step-part-editor {
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.step-part-editor .editor-head {
+    background-color: #f8da4e;
+}
+
+.controls a {
+    padding : 2px 6px 2px 0;
+}
+
+.previous-chains td {
+    padding: 3px;
+}
+
+.chain-flow {
+    margin: 5px 0;
+}
+
+#base-editor form.progress-form {
+    display: inline-block;
+}
